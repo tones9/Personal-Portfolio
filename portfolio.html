@@ -342,12 +342,96 @@
   /* Reveal animation */
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease, transform .8s ease}
   .reveal.in{opacity:1;transform:none}
+
+  /* Hamburger (mobile only) */
+  .hamburger{display:none;background:transparent;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:border-color .2s}
+  .hamburger:hover{border-color:var(--ink)}
+  .hamburger .bars{position:relative;width:18px;height:12px}
+  .hamburger .bars span{position:absolute;left:0;right:0;height:1.6px;background:var(--ink);border-radius:2px;transition:transform .25s ease, opacity .2s ease, top .25s ease}
+  .hamburger .bars span:nth-child(1){top:0}
+  .hamburger .bars span:nth-child(2){top:5px}
+  .hamburger .bars span:nth-child(3){top:10px}
+  .nav.open .hamburger .bars span:nth-child(1){top:5px;transform:rotate(45deg)}
+  .nav.open .hamburger .bars span:nth-child(2){opacity:0}
+  .nav.open .hamburger .bars span:nth-child(3){top:5px;transform:rotate(-45deg)}
+  /* Mobile menu drawer */
+  .mobile-menu{display:none;position:fixed;inset:62px 0 0 0;background:var(--paper);z-index:49;flex-direction:column;padding:24px;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  .nav.open + .mobile-menu, .mobile-menu.open{opacity:1;pointer-events:auto}
+  .mobile-menu ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0}
+  .mobile-menu li{border-bottom:1px solid var(--line)}
+  .mobile-menu a{display:flex;align-items:center;justify-content:space-between;padding:22px 4px;font-family:'Source Serif 4',serif;font-size:28px;letter-spacing:-0.02em;color:var(--ink);text-decoration:none;font-weight:400}
+  .mobile-menu a::after{content:"↗";font-family:'Geist Mono',monospace;color:var(--muted);font-size:18px}
+  .mobile-menu a:hover{color:var(--coral-deep)}
+  .mobile-menu .mobile-cta{margin-top:24px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 22px;background:var(--ink);color:var(--paper)!important;border-radius:999px;font-family:'Geist',sans-serif;font-size:14px;font-weight:500;text-decoration:none}
+  .mobile-menu .mobile-cta::after{content:none}
+  .mobile-menu .meta-info{margin-top:auto;padding-top:32px;font-family:'Geist Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase}
+
+  /* ---------- MOBILE RESPONSIVE ---------- */
+  @media (max-width:720px){
+    body{font-size:15px}
+    .nav ul{display:none}
+    .hamburger{display:inline-flex}
+    .mobile-menu{display:flex}
+    body.menu-open{overflow:hidden}
+    .hero{padding:48px 0 56px}
+    h1.display{font-size:clamp(38px,11vw,56px);letter-spacing:-0.03em;margin-bottom:22px}
+    .eyebrow{font-size:10.5px;margin-bottom:20px}
+    .hero-lede{font-size:16px;margin-bottom:26px}
+    .hero-meta{gap:8px}
+    .pill{padding:8px 12px;font-size:12.5px}
+    .hero-card{padding:22px;border-radius:14px}
+    .now{font-size:18px;margin-bottom:18px}
+    .stat .n{font-size:24px}
+    .stat .l{font-size:10.5px}
+    .availability .mono{font-size:10.5px}
+    section{padding:60px 0}
+    .sec-title{font-size:clamp(28px,7.5vw,38px)!important;line-height:1.08}
+    .sec-label{font-size:10.5px}
+    .about-body .copy{font-size:16px;line-height:1.6}
+    .about-body .copy p:first-child::first-letter{font-size:48px;padding:4px 8px 0 0}
+    .xp-time{font-size:11.5px}
+    .xp-time span{font-size:10px}
+    .xp-role h3{font-size:21px}
+    .xp-org{font-size:13px;margin-bottom:14px}
+    .xp-bullets li{font-size:14px;padding-left:18px}
+    .xp-bullets li::before{top:9px;width:8px}
+    .proj{padding:22px;border-radius:14px}
+    .proj h3{font-size:20px}
+    .proj .lede{font-size:14px}
+    .proj-bullets li{font-size:13px}
+    .proj-metrics{gap:18px;flex-wrap:wrap}
+    .proj-metrics .v{font-size:19px}
+    .skill-card{padding:20px;border-radius:14px}
+    .skill-card h4{font-size:17px;flex-wrap:wrap}
+    .chip{font-size:12px;padding:6px 10px}
+    .contact{padding:36px 22px;border-radius:18px}
+    .contact h2{font-size:clamp(28px,8vw,40px);margin-bottom:14px}
+    .contact p.lede{font-size:15px;margin-bottom:22px}
+    .btn{padding:12px 18px;font-size:13.5px}
+    .contact-actions{gap:8px}
+    .contact-aside dl{grid-template-columns:1fr;gap:4px 0}
+    .contact-aside dt{padding-top:14px}
+    .contact-aside dd{padding-bottom:6px;border-bottom:1px solid rgba(245,241,235,0.08)}
+    .contact-aside dd:last-child{border-bottom:none}
+    footer.foot{flex-direction:column;align-items:flex-start;gap:8px;font-size:11px;padding-bottom:32px}
+    .twosub{font-size:10.5px}
+    .cert-body h5{font-size:14.5px}
+    .cert-body p{font-size:12.5px}
+    .edu-item h5{font-size:17px}
+  }
+  @media (max-width:420px){
+    .wrap{padding:0 18px}
+    h1.display{font-size:34px}
+    .hero-card .stats{grid-template-columns:repeat(3,1fr);gap:8px}
+    .stat .n{font-size:22px}
+    .nav ul li:nth-last-child(n+2){display:none}
+  }
 </style>
 </head>
 <body>
 
 <!-- ============ NAV ============ -->
-<nav class="nav">
+<nav class="nav" id="siteNav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top">
       <span class="brand-dot"></span>
@@ -360,8 +444,22 @@
       <li><a href="#skills">Skills</a></li>
       <li><a class="nav-cta" href="#contact">Get in touch →</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span class="bars"><span></span><span></span><span></span></span>
+    </button>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#credentials">Credentials</a></li>
+  </ul>
+  <a class="mobile-cta" href="#contact">Get in touch →</a>
+  <p class="meta-info">Dublin · Open to PM roles</p>
+</div>
 
 <!-- ============ HERO ============ -->
 <header id="top" class="hero">
@@ -374,7 +472,7 @@
           I&rsquo;m a product manager who&rsquo;s owned end&#8209;to&#8209;end delivery of a regulated healthcare AI platform, designed multi&#8209;agent automation systems, and built outbound pipelines that move real revenue. <b>I think in roadmaps, ship in sprints, and prototype with LLMs.</b>
         </p>
         <div class="hero-meta">
-          <a class="pill" href="/cdn-cgi/l/email-protection#40212e342f2e3932212a252e243221717000272d21292c6e232f2d"><span class="__cf_email__" data-cfemail="93f2fde7fcfdeae1f2f9f6fdf7e1f2a2a3d3f4fef2faffbdf0fcfe">[email&#160;protected]</span></a>
+          <a class="pill" href="/cdn-cgi/l/email-protection#c0a1aeb4afaeb9b2a1aaa5aea4b2a1f1f080a7ada1a9aceea3afad"><span class="__cf_email__" data-cfemail="2e4f405a4140575c4f444b404a5c4f1f1e6e49434f4742004d4143">[email&#160;protected]</span></a>
           <a class="pill" href="tel:+353899860993">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
             +353 89 986 0993
@@ -828,7 +926,7 @@
           <h2>Let&rsquo;s build <em>something</em> together.</h2>
           <p class="lede">If you&rsquo;re hiring a PM who can own zero&#8209;to&#8209;one AI products, talk to engineers, and keep stakeholders aligned across regions — I&rsquo;d love to chat.</p>
           <div class="contact-actions">
-            <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#ec8d82988382959e8d868982889e8ddddcac8b818d8580c28f8381">
+            <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#65040b110a0b1c17040f000b0117045455250208040c094b060a08">
               Email me
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
@@ -837,7 +935,7 @@
         </div>
         <aside class="contact-aside">
           <dl>
-            <dt>Email</dt><dd><a href="/cdn-cgi/l/email-protection#d4b5baa0bbbaada6b5beb1bab0a6b5e5e494b3b9b5bdb8fab7bbb9"><span class="__cf_email__" data-cfemail="dabbb4aeb5b4a3a8bbb0bfb4bea8bbebea9abdb7bbb3b6f4b9b5b7">[email&#160;protected]</span></a></dd>
+            <dt>Email</dt><dd><a href="/cdn-cgi/l/email-protection#91f0ffe5feffe8e3f0fbf4fff5e3f0a0a1d1f6fcf0f8fdbff2fefc"><span class="__cf_email__" data-cfemail="31505f455e5f4843505b545f554350000171565c50585d1f525e5c">[email&#160;protected]</span></a></dd>
             <dt>Phone</dt><dd>+353 89 986 0993</dd>
             <dt>Location</dt><dd>Dublin, Ireland</dd>
             <dt>Status</dt><dd>Stamp 1G </dd>
@@ -849,12 +947,27 @@
 
     <footer class="foot">
       <span>© 2026 Antony Vishal</span>
-      <span>Designed &amp; built with care · <a href="/cdn-cgi/l/email-protection#7617180219180f04171c1318120417474636111b171f1a5815191b"><span class="__cf_email__" data-cfemail="7a1b140e151403081b101f141e081b4b4a3a1d171b131654191517">[email&#160;protected]</span></a></span>
+      <span>Designed &amp; built with care · <a href="/cdn-cgi/l/email-protection#5637382239382f24373c3338322437676616313b373f3a7835393b"><span class="__cf_email__" data-cfemail="6706091308091e15060d0209031506565727000a060e0b4904080a">[email&#160;protected]</span></a></span>
     </footer>
   </div>
 </section>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Hamburger toggle
+  const nav = document.getElementById('siteNav');
+  const burger = document.getElementById('hamburger');
+  const drawer = document.getElementById('mobileMenu');
+  function setMenu(open){
+    nav.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true':'false');
+    burger.setAttribute('aria-label', open ? 'Close menu':'Open menu');
+  }
+  burger.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
   // Reveal on scroll
   const io = new IntersectionObserver((entries) => {
     for (const e of entries) {
