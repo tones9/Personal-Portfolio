@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Antony Vishal — Product Manager</title>
+<meta name="description" content="Antony Vishal — Product Manager. AI-driven product delivery, zero-to-one execution, and cross-regional growth automation." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="400" fill="#FAF9F5"/>
+    <circle cx="200" cy="200" r="84" fill="#D97757"/>
+    <text x="200" y="220" font-family="Georgia, serif" font-size="68" font-style="italic" fill="#FAF9F5" text-anchor="middle">AV</text>
+  </svg>
+</template>
+<style>
+  :root{
+    --paper:#FAF9F5;
+    --paper-2:#F5F1EB;
+    --paper-3:#EDE7DA;
+    --card:#FFFFFF;
+    --ink:#1F1E1D;
+    --ink-2:#2C2A26;
+    --muted:#6B6862;
+    --muted-2:#8C8780;
+    --line:#E8E3DA;
+    --line-2:#D8D2C5;
+    --coral:#D97757;
+    --coral-deep:#B85C3F;
+    --coral-soft:#F2DDD0;
+    --kraft:#3D3929;
+    --leaf:#6B7F4F;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Geist','Söhne',ui-sans-serif,sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  /* Grain overlay */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:1000;
+    background:
+      radial-gradient(circle at 1px 1px, rgba(31,30,29,0.025) 1px, transparent 0) 0 0/3px 3px;
+    mix-blend-mode:multiply;opacity:.6;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  @media (max-width:720px){.wrap{padding:0 22px}}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb,var(--paper) 88%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid color-mix(in srgb,var(--line) 60%, transparent);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Source Serif 4',serif;font-size:18px;letter-spacing:-0.01em;color:var(--ink)}
+  .brand-dot{width:10px;height:10px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px var(--coral-soft)}
+  .brand b{font-weight:600}
+  .nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+  .nav a{
+    color:var(--muted);text-decoration:none;font-size:13.5px;font-weight:500;
+    letter-spacing:-0.005em;transition:color .2s;
+  }
+  .nav a:hover{color:var(--ink)}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:8px;padding:9px 16px;
+    background:var(--ink);color:var(--paper)!important;border-radius:999px;
+    font-weight:500;
+  }
+  .nav-cta:hover{background:var(--coral-deep);color:#fff!important}
+  @media (max-width:720px){.nav ul li:nth-child(-n+3){display:none}}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:90px 0 80px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.55fr .9fr;gap:80px;align-items:end}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:48px}}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'Geist Mono',ui-monospace,monospace;
+    font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);
+    margin-bottom:28px;
+  }
+  .eyebrow::before{content:"";width:24px;height:1px;background:var(--coral)}
+  h1.display{
+    font-family:'Source Serif 4',serif;
+    font-size:clamp(48px, 7.5vw, 104px);
+    font-weight:400;line-height:0.98;letter-spacing:-0.035em;
+    color:var(--ink);margin:0 0 28px;
+    text-wrap:balance;
+  }
+  h1.display em{font-style:italic;color:var(--coral);font-weight:300}
+  .hero-lede{
+    font-size:19px;line-height:1.5;color:var(--ink-2);max-width:560px;margin:0 0 36px;
+    font-weight:400;
+  }
+  .hero-lede b{font-weight:600;color:var(--ink)}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 14px;border:1px solid var(--line);
+    background:var(--card);border-radius:999px;font-size:13px;color:var(--ink-2);
+    text-decoration:none;transition:all .18s;
+  }
+  .pill:hover{border-color:var(--coral);color:var(--coral-deep);transform:translateY(-1px)}
+  .pill svg{width:14px;height:14px}
+
+  /* Right: card/portrait */
+  .hero-card{
+    background:linear-gradient(160deg, var(--paper-2) 0%, var(--paper-3) 100%);
+    border:1px solid var(--line);
+    border-radius:18px;padding:28px;position:relative;
+    box-shadow:0 1px 0 #fff inset, 0 24px 60px -28px rgba(31,30,29,0.18);
+  }
+  .hero-card .mono{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .availability{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+  .dot-live{width:8px;height:8px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 4px rgba(107,127,79,0.18);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(107,127,79,0.18)}50%{box-shadow:0 0 0 7px rgba(107,127,79,0.06)}}
+  .now{font-family:'Source Serif 4',serif;font-size:22px;line-height:1.3;color:var(--ink);letter-spacing:-0.015em;margin:0 0 20px}
+  .now em{font-style:italic;color:var(--coral-deep)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-2);padding-top:18px}
+  .stat .n{font-family:'Source Serif 4',serif;font-size:30px;letter-spacing:-0.02em;color:var(--ink);line-height:1}
+  .stat .l{font-size:11.5px;color:var(--muted);margin-top:6px;letter-spacing:0.01em}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:96px 0;position:relative}
+  .sec-head{display:grid;grid-template-columns:200px 1fr;gap:40px;margin-bottom:56px;align-items:start}
+  @media (max-width:720px){.sec-head{grid-template-columns:1fr;gap:14px;margin-bottom:40px}}
+  .sec-label{
+    font-family:'Geist Mono',monospace;font-size:11.5px;letter-spacing:0.14em;
+    text-transform:uppercase;color:var(--muted);padding-top:14px;
+    border-top:1px solid var(--ink);display:inline-block;
+  }
+  .sec-title{
+    font-family:'Source Serif 4',serif;font-weight:400;
+    font-size:clamp(32px,4.4vw,52px);line-height:1.04;letter-spacing:-0.025em;
+    color:var(--ink);margin:0;text-wrap:balance;max-width:780px;
+  }
+  .sec-title em{font-style:italic;color:var(--coral)}
+
+  /* ---------- ABOUT ---------- */
+  .about-body{display:grid;grid-template-columns:200px 1fr;gap:40px}
+  @media (max-width:720px){.about-body{grid-template-columns:1fr}}
+  .about-body .copy{max-width:760px;font-size:18px;line-height:1.65;color:var(--ink-2)}
+  .about-body .copy p{margin:0 0 22px}
+  .about-body .copy p:first-child::first-letter{
+    font-family:'Source Serif 4',serif;font-size:64px;float:left;line-height:.9;
+    padding:6px 12px 0 0;color:var(--coral);font-weight:400;
+  }
+  .about-body .copy mark{background:linear-gradient(transparent 60%, var(--coral-soft) 60%);color:inherit;padding:0 2px}
+
+  /* ---------- EXPERIENCE ---------- */
+  .xp{display:flex;flex-direction:column;gap:0}
+  .xp-row{
+    display:grid;grid-template-columns:200px 1fr;gap:40px;
+    padding:36px 0;border-top:1px solid var(--line);
+    transition:background .2s;
+  }
+  .xp-row:hover{background:linear-gradient(90deg,transparent,var(--paper-2) 20%, transparent 100%)}
+  .xp:last-child .xp-row:last-child{border-bottom:1px solid var(--line)}
+  @media (max-width:720px){.xp-row{grid-template-columns:1fr;gap:14px;padding:28px 0}}
+  .xp-time{font-family:'Geist Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:0.02em;padding-top:6px}
+  .xp-time span{display:block;color:var(--coral-deep);margin-top:4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+  .xp-role h3{
+    font-family:'Source Serif 4',serif;font-weight:500;font-size:26px;letter-spacing:-0.015em;
+    color:var(--ink);margin:0 0 4px;line-height:1.15;
+  }
+  .xp-org{font-size:14.5px;color:var(--muted);margin:0 0 18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .xp-org b{color:var(--ink-2);font-weight:500}
+  .xp-org .sep{width:3px;height:3px;border-radius:50%;background:var(--line-2)}
+  .xp-bullets{margin:0;padding:0;list-style:none}
+  .xp-bullets li{
+    position:relative;padding:0 0 12px 22px;color:var(--ink-2);font-size:15.5px;line-height:1.55;max-width:760px;
+  }
+  .xp-bullets li::before{
+    content:"";position:absolute;left:0;top:10px;width:10px;height:1px;background:var(--coral);
+  }
+  .xp-bullets li b{color:var(--ink);font-weight:600}
+
+  /* ---------- PROJECTS ---------- */
+  .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  @media (max-width:820px){.proj-grid{grid-template-columns:1fr}}
+  .proj{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:30px;display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden;
+    transition:all .25s ease;
+  }
+  .proj:hover{border-color:var(--line-2);transform:translateY(-2px);box-shadow:0 28px 60px -36px rgba(31,30,29,0.25)}
+  .proj.feature{grid-column:span 2;background:linear-gradient(160deg, var(--kraft) 0%, #2b2920 100%);color:var(--paper);border-color:var(--kraft)}
+  .proj.feature .proj-head .num,.proj.feature .proj-stack span{color:var(--paper-2);border-color:rgba(245,241,235,0.18)}
+  .proj.feature h3{color:var(--paper)}
+  .proj.feature h3 em{color:#F0C8B0}
+  .proj.feature p{color:rgba(245,241,235,0.78)}
+  .proj.feature .proj-bullets li{color:rgba(245,241,235,0.78)}
+  .proj.feature .proj-bullets li::before{background:#F0C8B0}
+  @media (max-width:820px){.proj.feature{grid-column:auto}}
+
+  .proj-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+  .proj .num{
+    font-family:'Geist Mono',monospace;font-size:11.5px;letter-spacing:0.14em;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .proj .tag{
+    font-size:11px;font-family:'Geist Mono',monospace;letter-spacing:0.08em;
+    padding:5px 10px;background:var(--paper-2);border-radius:999px;color:var(--ink-2);
+    text-transform:uppercase;
+  }
+  .proj.feature .tag{background:rgba(245,241,235,0.1);color:var(--paper-2)}
+  .proj h3{
+    font-family:'Source Serif 4',serif;font-weight:500;font-size:24px;letter-spacing:-0.015em;
+    color:var(--ink);margin:0;line-height:1.2;text-wrap:balance;
+  }
+  .proj h3 em{font-style:italic;color:var(--coral-deep)}
+  .proj .lede{font-size:15px;color:var(--ink-2);margin:0;line-height:1.55}
+  .proj-bullets{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+  .proj-bullets li{
+    position:relative;padding-left:18px;font-size:14px;color:var(--muted);line-height:1.55;
+  }
+  .proj-bullets li::before{
+    content:"";position:absolute;left:0;top:9px;width:8px;height:1px;background:var(--coral);
+  }
+  .proj-bullets li b{color:var(--ink);font-weight:600}
+  .proj-stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}
+  .proj-stack span{
+    font-size:11.5px;font-family:'Geist Mono',monospace;color:var(--muted);
+    padding:4px 9px;border:1px solid var(--line);border-radius:999px;letter-spacing:0.02em;
+  }
+  .proj-metrics{display:flex;gap:24px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .proj.feature .proj-metrics{border-color:rgba(245,241,235,0.14)}
+  .proj-metrics .m{display:flex;flex-direction:column;gap:2px}
+  .proj-metrics .v{font-family:'Source Serif 4',serif;font-size:22px;letter-spacing:-0.02em;color:var(--ink)}
+  .proj.feature .proj-metrics .v{color:#F0C8B0}
+  .proj-metrics .k{font-size:11px;color:var(--muted);letter-spacing:0.04em;text-transform:uppercase}
+
+  /* ---------- SKILLS ---------- */
+  .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  @media (max-width:820px){.skills{grid-template-columns:1fr}}
+  .skill-card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;
+    transition:border-color .2s;
+  }
+  .skill-card:hover{border-color:var(--coral)}
+  .skill-card h4{
+    font-family:'Source Serif 4',serif;font-weight:500;font-size:19px;letter-spacing:-0.01em;
+    color:var(--ink);margin:0 0 16px;display:flex;align-items:center;gap:10px;
+  }
+  .skill-card h4 .badge{
+    font-family:'Geist Mono',monospace;font-size:10px;color:var(--coral-deep);
+    background:var(--coral-soft);padding:3px 8px;border-radius:999px;letter-spacing:0.08em;
+    text-transform:uppercase;font-weight:500;
+  }
+  .skill-chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{
+    font-size:13px;padding:7px 12px;background:var(--paper-2);color:var(--ink-2);
+    border-radius:999px;border:1px solid transparent;transition:all .15s;
+  }
+  .chip:hover{border-color:var(--coral);background:var(--card);color:var(--coral-deep)}
+  .chip.strong{background:var(--ink);color:var(--paper)}
+
+  /* ---------- CERTS + EDU ---------- */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  @media (max-width:820px){.two-col{grid-template-columns:1fr;gap:40px}}
+  .twosub{
+    font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.14em;
+    text-transform:uppercase;color:var(--muted);margin:0 0 22px;padding-bottom:10px;border-bottom:1px solid var(--line);
+  }
+  .cert-list, .edu-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+  .cert{
+    display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line);
+  }
+  .cert:last-child{border-bottom:none}
+  .cert-mark{
+    width:34px;height:34px;flex-shrink:0;border-radius:9px;background:var(--paper-2);
+    display:flex;align-items:center;justify-content:center;color:var(--coral-deep);
+    font-family:'Source Serif 4',serif;font-size:15px;font-weight:600;
+  }
+  .cert-body h5{margin:0 0 2px;font-size:15.5px;font-weight:500;color:var(--ink);letter-spacing:-0.005em}
+  .cert-body p{margin:0;font-size:13px;color:var(--muted)}
+  .edu-item{padding:18px 0;border-bottom:1px solid var(--line)}
+  .edu-item:last-child{border-bottom:none}
+  .edu-item h5{margin:0 0 4px;font-family:'Source Serif 4',serif;font-weight:500;font-size:20px;letter-spacing:-0.01em;color:var(--ink)}
+  .edu-item .where{font-size:14px;color:var(--muted);margin:0 0 8px}
+  .edu-item .meta{display:flex;gap:14px;flex-wrap:wrap;font-family:'Geist Mono',monospace;font-size:11.5px;color:var(--muted);letter-spacing:0.04em}
+  .edu-item .meta .honour{color:var(--coral-deep)}
+
+  /* ---------- CONTACT FOOTER ---------- */
+  .contact{
+    background:var(--ink);color:var(--paper);
+    border-radius:24px;padding:64px 56px;margin-bottom:48px;
+    position:relative;overflow:hidden;
+  }
+  .contact::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 80% 20%, rgba(217,119,87,0.18), transparent 50%);
+    pointer-events:none;
+  }
+  .contact-inner{position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:end}
+  @media (max-width:820px){.contact-inner{grid-template-columns:1fr;gap:32px}.contact{padding:44px 28px}}
+  .contact h2{
+    font-family:'Source Serif 4',serif;font-weight:400;
+    font-size:clamp(36px,5vw,64px);line-height:1.02;letter-spacing:-0.03em;
+    margin:0 0 18px;color:var(--paper);text-wrap:balance;
+  }
+  .contact h2 em{font-style:italic;color:#F0C8B0}
+  .contact p.lede{font-size:17px;color:rgba(245,241,235,0.7);max-width:520px;margin:0 0 28px}
+  .contact-actions{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;padding:14px 22px;
+    border-radius:999px;font-size:14.5px;font-weight:500;text-decoration:none;
+    transition:all .2s;letter-spacing:-0.005em;
+  }
+  .btn-primary{background:var(--coral);color:#fff}
+  .btn-primary:hover{background:#fff;color:var(--ink)}
+  .btn-ghost{background:transparent;color:var(--paper);border:1px solid rgba(245,241,235,0.22)}
+  .btn-ghost:hover{border-color:var(--paper);background:rgba(245,241,235,0.06)}
+  .contact-aside{
+    border-left:1px solid rgba(245,241,235,0.14);padding-left:36px;
+  }
+  @media (max-width:820px){.contact-aside{border-left:none;padding-left:0;border-top:1px solid rgba(245,241,235,0.14);padding-top:28px}}
+  .contact-aside dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:14px 22px;font-size:14px}
+  .contact-aside dt{font-family:'Geist Mono',monospace;font-size:11px;color:rgba(245,241,235,0.5);letter-spacing:0.1em;text-transform:uppercase;padding-top:2px}
+  .contact-aside dd{margin:0;color:var(--paper)}
+  .contact-aside dd a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(245,241,235,0.2)}
+  .contact-aside dd a:hover{border-color:var(--coral)}
+
+  footer.foot{padding:0 0 48px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--muted);font-family:'Geist Mono',monospace;letter-spacing:0.04em}
+  footer.foot a{color:var(--muted);text-decoration:none}
+  footer.foot a:hover{color:var(--coral-deep)}
+
+  /* ---------- Section dividers ---------- */
+  .div-rule{height:1px;background:linear-gradient(90deg,transparent,var(--line) 30%, var(--line) 70%, transparent);max-width:1100px;margin:0 auto}
+
+  /* Reveal animation */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-dot"></span>
+      <span>Antony <b>Vishal</b></span>
+    </a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a class="nav-cta" href="#contact">Get in touch →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="top" class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Product Manager · Dublin, Ireland</div>
+        <h1 class="display">Shipping AI&#8209;native products from <em>zero to one.</em></h1>
+        <p class="hero-lede">
+          I&rsquo;m a product manager who&rsquo;s owned end&#8209;to&#8209;end delivery of a regulated healthcare AI platform, designed multi&#8209;agent automation systems, and built outbound pipelines that move real revenue. <b>I think in roadmaps, ship in sprints, and prototype with LLMs.</b>
+        </p>
+        <div class="hero-meta">
+          <a class="pill" href="/cdn-cgi/l/email-protection#3958574d5657404f504a5158550900795e54585055175a5654"><span class="__cf_email__" data-cfemail="7d1c13091213040f1c171813190f1c4c4d3d1a101c1411531e1210">[email&#160;protected]</span></a>
+          <a class="pill" href="tel:+353899860993">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +353 89 986 0993
+          </a>
+          <span class="pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Dublin, IE · Stamp 1G
+          </span>
+          <a class="pill" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 110-3.6 1.8 1.8 0 010 3.6zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <div class="availability">
+          <span class="dot-live"></span>
+          <span class="mono">Open to PM roles · EU/Remote</span>
+        </div>
+        <p class="now">Currently building <em>AI-powered outbound &amp; commerce</em> automations — Clay, n8n, Claude.</p>
+        <div class="stats">
+          <div class="stat"><div class="n">4+</div><div class="l">years in professional experience</div></div>
+          <div class="stat"><div class="n">8</div><div class="l">shipped projects</div></div>
+          <div class="stat"><div class="n">975+</div><div class="l">leads enriched</div></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<div class="wrap"><div class="div-rule"></div></div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-label">01 · About</span>
+      <h2 class="sec-title">A PM who treats <em>AI</em> as infrastructure, not a feature.</h2>
+    </div>
+    <div class="about-body">
+      <span class="sec-label" style="border:none;padding:0">Story</span>
+      <div class="copy">
+        <p>
+          At Knowurture I owned end&#8209;to&#8209;end delivery of an AI&#8209;powered healthcare platform — from initial concept and stakeholder requirements through to live deployment. I built the roadmap, led refinement with engineers, and made prioritisation calls across concurrent workstreams in a domain where <mark>compliance and accuracy were non&#8209;negotiable</mark>.
+        </p>
+        <p>
+          At Concentrix I supported Adobe customers across APAC, North America, and Europe — developing first&#8209;hand awareness of how user needs, escalation patterns, and product friction differ meaningfully across regions. That cross&#8209;regional perspective shapes how I think about go&#8209;to&#8209;market and localisation decisions.
+        </p>
+        <p>
+          And on AI — I haven&rsquo;t just used it as a writing tool. I&rsquo;ve designed and shipped AI&#8209;powered workflows, built multi&#8209;agent automation systems, and most recently orchestrated a full e&#8209;commerce brand build using Claude, CoWork, and MCP connectors. I&rsquo;m hungry to bring that hands&#8209;on AI fluency into product work and learn new domains fast.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-label">02 · Experience</span>
+      <h2 class="sec-title">Four years+ across product, ops, and customer‑facing roles — shipping at every level.</h2>
+    </div>
+
+    <div class="xp">
+
+      <article class="xp-row">
+        <div class="xp-time">Feb 2026 — Present<span>Current</span></div>
+        <div class="xp-role">
+          <h3>AI Builder <span style="font-family:'Geist',sans-serif;font-size:13px;font-weight:500;color:var(--coral-deep);background:var(--coral-soft);padding:4px 10px;border-radius:999px;letter-spacing:0;vertical-align:middle;margin-left:8px;position:relative;top:-3px">Self-Directed</span></h3>
+          <p class="xp-org"><b>Personal &amp; continuous development</b><span class="sep"></span>Dublin, Ireland</p>
+          <p style="font-size:15.5px;color:var(--ink-2);line-height:1.6;max-width:760px;margin:0 0 18px">I&rsquo;ve been building real AI systems &mdash; not prototypes. Across six projects I&rsquo;ve designed multi&#8209;agent automation workflows, built outbound engines using Clay and n8n, and shipped a full e&#8209;commerce brand from zero to a live Shopify store using Claude AI and MCP connectors.</p>
+          <ul class="xp-bullets">
+            <li>Built <b>RecruiterOS Mini</b> &mdash; an end&#8209;to&#8209;end AI recruitment outreach system using Clay, Claygent, n8n (self&#8209;hosted), and the Claude API to generate personalised cold emails at scale for a recruitment agency, delivering production&#8209;ready outreach for companies including <b>Rippling, Datadog, and ClickUp</b>.</li>
+            <li>Designed and implemented <b>three Clay&#8209;based outbound pipelines</b> for personal projects &mdash; enriching <b>450+ leads</b>, building qualification scoring models, and automating personalised cold email sequences targeting European growth and e&#8209;commerce leaders.</li>
+            <li>Built an AI&#8209;powered <b>lead qualification workflow in n8n</b> integrating Apollo.io and HubSpot CRM APIs &mdash; automating enrichment, scoring, regional routing, and CRM contact creation using custom JavaScript logic.</li>
+            <li>Developed an AI&#8209;based <b>company classification system</b> using n8n and the Claude API to process large CSV datasets, automating batch classification and enrichment at scale.</li>
+            <li>Orchestrated <b>Clairon&rsquo;s Crochet</b> &mdash; a complete e&#8209;commerce brand build from zero to a live Shopify store using Claude AI, CoWork, and MCP connectors &mdash; covering brand strategy, UX wireframes, a custom Liquid theme, and full Notion project tracking, <b>replacing a six&#8209;person specialist team</b>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="xp-row">
+        <div class="xp-time">Jan 2024 — Feb 2026<span>
+</span></div>
+        <div class="xp-role">
+          <h3>Product Manager</h3>
+          <p class="xp-org"><b>Knowurture Health Solutions Pvt. Ltd.</b><span class="sep"></span>Remote</p>
+          <ul class="xp-bullets">
+            <li>Owned <b>zero&#8209;to&#8209;one delivery</b> of the organisation&rsquo;s first AI&#8209;driven patient interaction platform — from initial concept and stakeholder requirements through to live deployment in December 2025.</li>
+            <li>Designed and owned patient communication workflows including triggered notification systems that kept users informed at critical stages of the insurance claims approval process, balancing compliance with seamless UX.</li>
+            <li>Defined and maintained the product roadmap, making prioritisation decisions to balance stakeholder needs, technical constraints, and delivery velocity across concurrent workstreams.</li>
+            <li>Led sprint refinement and planning with a cross&#8209;functional team of <b>6 (AI engineers + backend developers)</b>, ensuring user stories were clearly scoped with acceptance criteria before entering development.</li>
+            <li>Used <b>SQL and Snowflake</b> to interrogate product and operational datasets — supporting data&#8209;driven prioritisation, defect investigation, and release readiness validation.</li>
+            <li>Identified delivery bottlenecks through trend analysis across <b>5+ workstreams</b> and proactively adapted plans, contributing to a <b>~20% reduction in delivery delays</b>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="xp-row">
+        <div class="xp-time">Aug 2021 — Sep 2022</div>
+        <div class="xp-role">
+          <h3>Operations Lead</h3>
+          <p class="xp-org"><b>Concentrix Pvt Ltd</b><span class="sep"></span>Bengaluru, India</p>
+          <ul class="xp-bullets">
+            <li>Led day&#8209;to&#8209;day operations for a <b>16&#8209;member team</b> supporting Adobe customers across APAC, North America, and Europe — developing direct awareness of how user needs and product friction vary across regions and markets.</li>
+            <li>Analysed customer interaction patterns and recurring friction points to identify product and process improvement opportunities, recommending changes that <b>reduced repeat escalations by ~20%</b>.</li>
+            <li>Owned team KPI reporting using <b>Excel and Power BI</b>, delivering structured weekly and monthly performance insights to management and using data to drive coaching decisions.</li>
+            <li>Designed and delivered onboarding programmes and knowledge resources that standardised team practices and reduced ramp time for new team members.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="xp-row">
+        <div class="xp-time">Aug 2020 — Jul 2021</div>
+        <div class="xp-role">
+          <h3>Customer Operations Analyst</h3>
+          <p class="xp-org"><b>Concentrix Pvt Ltd</b><span class="sep"></span>Bengaluru, India</p>
+          <ul class="xp-bullets">
+            <li>Managed <b>260–280 monthly customer interactions</b> for a global Adobe product, developing deep empathy for user pain points and consistently maintaining <b>CSAT above 90%</b>.</li>
+            <li>Identified recurring product friction patterns through structured issue analysis and built a troubleshooting framework adopted team&#8209;wide, <b>reducing resolution steps from 6+ to 3–4</b>.</li>
+            <li>Created and maintained product knowledge documentation and escalation guides, improving team consistency and reducing time&#8209;to&#8209;resolution.</li>
+            <li>Logged product defects in <b>Jira</b> with structured reproduction steps and priority classification, contributing to accurate issue tracking and development&#8209;team prioritisation.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-label">03 · Projects</span>
+      <h2 class="sec-title">Eight personal projects shipped in the last year &mdash; <em>AI workflows, outbound engines, full brand builds.</em></h2>
+    </div>
+
+    <div class="proj-grid">
+
+      <!-- FEATURE PROJECT -->
+      <article class="proj feature">
+        <div class="proj-head">
+          <span class="num">Featured · 2026</span>
+          <span class="tag">AI Automation</span>
+        </div>
+        <h3>RecruiterOS Mini &mdash; an <em>AI&#8209;powered recruitment outreach</em> system, end to end.</h3>
+        <p class="lede">An end&#8209;to&#8209;end automation that identifies high&#8209;intent hiring companies and generates personalised cold emails at scale for recruitment agencies — built for Automindz.</p>
+        <div class="proj-metrics">
+          <div class="m"><div class="v">145+</div><div class="k">Sales leaders enriched</div></div>
+          <div class="m"><div class="v">1–10</div><div class="k">Hiring intent scoring</div></div>
+          <div class="m"><div class="v">6</div><div class="k">Production-grade brands targeted</div></div>
+        </div>
+        <ul class="proj-bullets">
+          <li>Defined <b>ICP targeting fast&#8209;growing European SaaS &amp; AI companies</b> actively hiring GTM and sales talent.</li>
+          <li>Imported and enriched a <b>145+ sales leaders dataset</b> in Clay using Claygent with custom JSON schemas to calculate Hiring Intent Score, Prospect Relevance, and suggested Decision Makers.</li>
+          <li>Designed and implemented a fully automated workflow in <b>n8n (self&#8209;hosted)</b> that processes leads in batches, sends structured prompts to Claude (Anthropic), and writes personalised email Subject + Body back to Google Sheets.</li>
+          <li>Delivered production&#8209;ready personalised outreach for companies including <b>Parloa, Rippling, Datadog, ClickUp, Okta, and Chainguard</b>.</li>
+        </ul>
+        <div class="proj-stack">
+          <span>Clay</span><span>Claygent</span><span>n8n</span><span>Claude API</span><span>Google Sheets</span><span>JSON Schema</span>
+        </div>
+      </article>
+
+      <!-- 1 -->
+      <article class="proj">
+        <div class="proj-head">
+          <span class="num">01 · 2025</span>
+          <span class="tag">Lead Engine</span>
+        </div>
+        <h3>European Growth &amp; E&#8209;commerce <em>Lead Engine</em></h3>
+        <p class="lede">A Clay&#8209;based lead generation system targeting Heads of Growth, E&#8209;commerce, and Digital Marketing leaders across Europe.</p>
+        <ul class="proj-bullets">
+          <li>Built a list of <b>450+ companies</b> with enriched decision&#8209;maker contact data via Apollo, Hunter, and LinkedIn.</li>
+          <li>Created dynamic personalisation formulas based on company stage, tech stack, and recent activity.</li>
+          <li>Delivered clean, segmented tables with qualification scoring ready for outbound campaigns.</li>
+        </ul>
+        <div class="proj-stack"><span>Clay</span><span>Apollo</span><span>Hunter</span><span>LinkedIn</span></div>
+      </article>
+
+      <!-- 2 -->
+      <article class="proj">
+        <div class="proj-head">
+          <span class="num">02 · 2025</span>
+          <span class="tag">For Creem.io</span>
+        </div>
+        <h3>Recently Funded <em>Startups Pipeline</em></h3>
+        <p class="lede">A Clay pipeline that identifies and enriches recently funded European startups, Seed to Series B.</p>
+        <ul class="proj-bullets">
+          <li>Surfaced <b>380+ recently funded startups</b> with key decision&#8209;maker mapping — Founders, Heads of Growth, CFOs, Heads of Ops.</li>
+          <li>Developed personalised cold email openers referencing funding details, hiring signals, and expansion plans.</li>
+          <li>Shipped a ready&#8209;to&#8209;use lead table with qualification criteria and next&#8209;step recommendations.</li>
+        </ul>
+        <div class="proj-stack"><span>Clay</span><span>Apollo</span><span>Email Sequencing</span></div>
+      </article>
+
+      <!-- 3 -->
+      <article class="proj">
+        <div class="proj-head">
+          <span class="num">03 · 2025</span>
+          <span class="tag">For Modash</span>
+        </div>
+        <h3>Modash DTC <em>Outbound ICP Pipeline</em></h3>
+        <p class="lede">End&#8209;to&#8209;end outbound pipeline targeting Shopify&#8209;based DTC brands ready for influencer marketing.</p>
+        <ul class="proj-bullets">
+          <li>Built a <b>qualification scoring model (0–100)</b> using signals like Shopify usage, revenue, tech stack (Klaviyo, Gorgias), and marketing maturity.</li>
+          <li>Automated routing logic — high&#8209;ICP leads → sales outreach, lower&#8209;ICP → self&#8209;serve activation.</li>
+          <li>Wrote personalised email sequences plus a demo&#8209;booking page and rejection flows to improve conversion and UX.</li>
+        </ul>
+        <div class="proj-stack"><span>Clay</span><span>Klaviyo signals</span><span>Shopify signals</span></div>
+      </article>
+
+      <!-- 5 -->
+      <article class="proj">
+        <div class="proj-head">
+          <span class="num">04 · 2025</span>
+          <span class="tag">CRM Automation</span>
+        </div>
+        <h3>AI&#8209;Powered <em>Lead Qualification</em> Automation</h3>
+        <p class="lede">Automated lead management workflow integrating Apollo.io and HubSpot CRM via n8n.</p>
+        <ul class="proj-bullets">
+          <li>Built lead enrichment, qualification, regional routing, and CRM contact creation using custom JavaScript logic.</li>
+          <li>Reduced manual lead processing with <b>real&#8209;time API workflow automation</b> and lead scoring.</li>
+        </ul>
+        <div class="proj-stack"><span>n8n</span><span>HubSpot</span><span>Apollo API</span><span>JavaScript</span></div>
+      </article>
+
+      <!-- 6 -->
+      <article class="proj">
+        <div class="proj-head">
+          <span class="num">05 · 2025</span>
+          <span class="tag">Classification</span>
+        </div>
+        <h3>AI&#8209;Based <em>Company Classification</em> at scale</h3>
+        <p class="lede">Automated data classification workflow that identifies IT vs non&#8209;IT companies from large CSV datasets using the Anthropic Claude API.</p>
+        <ul class="proj-bullets">
+          <li>Automated CSV parsing, <b>batch processing</b>, AI&#8209;powered classification, and output file generation in JS.</li>
+          <li>Improved large&#8209;scale data processing efficiency with AI&#8209;driven categorisation and CSV enrichment.</li>
+        </ul>
+        <div class="proj-stack"><span>n8n</span><span>Claude API</span><span>JavaScript</span><span>CSV</span></div>
+      </article>
+
+      <!-- 8 - Clairon -->
+      <article class="proj">
+        <div class="proj-head">
+          <span class="num">06 · 2025</span>
+          <span class="tag">Zero-to-One Brand</span>
+        </div>
+        <h3>Clairon&rsquo;s Crochet &mdash; an <em>AI&#8209;orchestrated brand &amp; e&#8209;commerce build</em></h3>
+        <p class="lede">A multi&#8209;agent AI workflow that delivered a complete e&#8209;commerce brand from zero to a live Shopify store — replacing a team of six specialists.</p>
+        <ul class="proj-bullets">
+          <li>Designed brand strategy, <b>5&#8209;page UX wireframes</b> (mobile + desktop), and a full visual system using Claude as a structured expert persona across <b>six roles</b>.</li>
+          <li>Built and deployed a custom Shopify theme using Liquid + CSS design tokens, written autonomously by Claude CoWork directly into local project files.</li>
+          <li>Integrated Shopify and Notion via <b>MCP connectors</b> from Claude chat — automating collection creation and project tracking without opening either admin panel.</li>
+          <li>Managed lifecycle across <b>33 tasks &amp; 7 phases</b> from strategy to live published store in a Notion workspace built entirely via Claude.</li>
+        </ul>
+        <div class="proj-stack"><span>Claude.ai</span><span>Claude CoWork</span><span>MCP</span><span>Shopify</span><span>Liquid</span><span>Higgsfield</span><span>Notion</span></div>
+      </article>
+
+      <!-- 7 - cloud -->
+      <article class="proj">
+        <div class="proj-head">
+          <span class="num">07 · 2025</span>
+          <span class="tag">Infra</span>
+        </div>
+        <h3>Cloud Infra &amp; <em>Deployment Automation</em></h3>
+        <p class="lede">Configured and managed cloud&#8209;based virtual servers for application hosting and deployment.</p>
+        <ul class="proj-bullets">
+          <li>Linux EC2 environments — server setup, SSH connectivity, application deployment, env configuration.</li>
+          <li>Git/GitHub workflows for source control, branching, and deployment&#8209;ready codebase maintenance.</li>
+          <li>End&#8209;to&#8209;end deployment pipelines integrating cloud hosting with source control and CLI ops.</li>
+        </ul>
+        <div class="proj-stack"><span>AWS EC2</span><span>Linux</span><span>Git</span><span>GitHub</span><span>SSH</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-label">04 · Skills</span>
+      <h2 class="sec-title">The toolkit &mdash; <em>product, AI, data, and the glue between them.</em></h2>
+    </div>
+
+    <div class="skills">
+      <article class="skill-card">
+        <h4>Product Management <span class="badge">Core</span></h4>
+        <div class="skill-chips">
+          <span class="chip strong">Product Roadmap</span>
+          <span class="chip">Backlog management</span>
+          <span class="chip">Feature prioritisation</span>
+          <span class="chip">User story writing</span>
+          <span class="chip">Acceptance criteria</span>
+          <span class="chip">Sprint planning</span>
+          <span class="chip strong">Zero-to-one delivery</span>
+          <span class="chip">Release management</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <h4>AI &amp; Technology <span class="badge">Specialty</span></h4>
+        <div class="skill-chips">
+          <span class="chip strong">Generative AI product delivery</span>
+          <span class="chip">AI workflow design</span>
+          <span class="chip">LLM-assisted development</span>
+          <span class="chip strong">Multi-agent automation</span>
+          <span class="chip">Claude API</span>
+          <span class="chip">n8n</span>
+          <span class="chip">Clay / Claygent</span>
+          <span class="chip">MCP connectors</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <h4>Data &amp; Analytics</h4>
+        <div class="skill-chips">
+          <span class="chip">SQL (Intermediate)</span>
+          <span class="chip">Snowflake</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Excel</span>
+          <span class="chip strong">Data-driven decisions</span>
+          <span class="chip">Delivery trend analysis</span>
+          <span class="chip">KPI tracking</span>
+          <span class="chip">Operational analytics</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <h4>Stakeholder &amp; Customer</h4>
+        <div class="skill-chips">
+          <span class="chip">Customer empathy</span>
+          <span class="chip">Requirements gathering</span>
+          <span class="chip strong">Stakeholder alignment</span>
+          <span class="chip">Cross-functional leadership</span>
+          <span class="chip">Executive reporting</span>
+          <span class="chip">GTM support</span>
+        </div>
+      </article>
+
+      <article class="skill-card" style="grid-column:1/-1">
+        <h4>Agile Delivery</h4>
+        <div class="skill-chips">
+          <span class="chip strong">Scrum</span>
+          <span class="chip">Sprint refinement</span>
+          <span class="chip">Backlog grooming</span>
+          <span class="chip">Jira</span>
+          <span class="chip">Confluence</span>
+          <span class="chip">Azure DevOps</span>
+          <span class="chip">Distributed team coordination</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTS + EDU ============ -->
+<section id="credentials">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-label">05 · Credentials</span>
+      <h2 class="sec-title">Certifications &amp; education &mdash; <em>the formal record.</em></h2>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <p class="twosub">Certifications · 5</p>
+        <ul class="cert-list">
+          <li class="cert">
+            <div class="cert-mark">AI</div>
+            <div class="cert-body">
+              <h5>Generative AI Overview for Project Managers</h5>
+              <p>Practical PM-focused GenAI workflows &amp; risks.</p>
+            </div>
+          </li>
+          <li class="cert">
+            <div class="cert-mark">BA</div>
+            <div class="cert-body">
+              <h5>IIBA Certified — Entry Certificate in Business Analysis (ECBA)</h5>
+              <p>International Institute of Business Analysis.</p>
+            </div>
+          </li>
+          <li class="cert">
+            <div class="cert-mark">SF</div>
+            <div class="cert-body">
+              <h5>Scrum Fundamentals Certified (SFC)</h5>
+              <p>Scrum framework, roles, ceremonies, artifacts.</p>
+            </div>
+          </li>
+          <li class="cert">
+            <div class="cert-mark">P2</div>
+            <div class="cert-body">
+              <h5>PRINCE2® 7 Foundation</h5>
+              <p>Structured project management methodology.</p>
+            </div>
+          </li>
+          <li class="cert">
+            <div class="cert-mark">AZ</div>
+            <div class="cert-body">
+              <h5>Microsoft Certified: Azure Data Fundamentals</h5>
+              <p>Cloud data services, storage, analytics on Azure.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="twosub">Education · 2</p>
+        <div class="edu-list">
+          <article class="edu-item">
+            <h5>MSc Business Analytics</h5>
+            <p class="where">Dublin Business School &mdash; Dublin, Ireland</p>
+            <div class="meta">
+              <span>Sept 2022 – Jan 2024</span>
+              <span class="honour">2:1 Honours</span>
+            </div>
+          </article>
+          <article class="edu-item">
+            <h5>B.E. Information Science</h5>
+            <p class="where">Visvesvaraya Technological University &mdash; Bengaluru, India</p>
+            <div class="meta">
+              <span>Aug 2015 – May 2019</span>
+              <span class="honour">2:1 Honours</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact">
+      <div class="contact-inner">
+        <div>
+          <h2>Let&rsquo;s build <em>something</em> together.</h2>
+          <p class="lede">If you&rsquo;re hiring a PM who can own zero&#8209;to&#8209;one AI products, talk to engineers, and keep stakeholders aligned across regions — I&rsquo;d love to chat.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#97f6f9e3f8f9eee1fee4fff6fba7aed7f0faf6fefbb9f4f8fa">
+              Email me
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="tel:+353899860993">Call · +353 89 986 0993</a>
+          </div>
+        </div>
+        <aside class="contact-aside">
+          <dl>
+            <dt>Email</dt><dd><a href="/cdn-cgi/l/email-protection#b1d0dfc5dedfc8c7d8c2d9d0dd8188f1d6dcd0d8dd9fd2dedc"><span class="__cf_email__" data-cfemail="20414e544f4e5952414a454e445241111060474d41494c0e434f4d">[email&#160;protected]</span></a></dd>
+            <dt>Phone</dt><dd>+353 89 986 0993</dd>
+            <dt>Location</dt><dd>Dublin, Ireland</dd>
+            <dt>Status</dt><dd>Stamp 1G </dd>
+            <dt>Availability</dt><dd>Open to product roles · EU &amp; remote</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <span>© 2026 Antony Vishal</span>
+      <span>Designed &amp; built with care · <a href="/cdn-cgi/l/email-protection#8cede2f8e3e2f5fae5ffe4ede0bcb5ccebe1ede5e0a2efe3e1"><span class="__cf_email__" data-cfemail="a2c3ccd6cdccdbd4cbd1cac3ce929be2c5cfc3cbce8cc1cdcf">[email&#160;protected]</span></a></span>
+    </footer>
+  </div>
+</section>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    }
+  }, {threshold:0.08});
+  document.querySelectorAll('section, .proj, .skill-card').forEach(el => {
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+  // Safety fallback: if IO hasn't fired within 600ms, force visible.
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in'));
+  }, 600);
+</script>
+
+</body>
+</html>
